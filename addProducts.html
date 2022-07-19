@@ -12,7 +12,7 @@
     <link href="./assets/styles/style.css" rel="stylesheet">
 </head>
 
-<body class="info">
+<body>
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
@@ -48,58 +48,49 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid prueba">
-            <img src="https://http2.mlstatic.com/D_NQ_728679-MLA50712544360_072022-OO.webp" alt="" class="w-100">
-        </div>
     </header>
     <main>
-        <div class="container mt-5 py-4 bg-white rounded">
+        <div class="container mt-5">
             <div class="row">
-                <div class="col-3">
-
-                    <p>Paga comodo y seguro con mercado pago</p>
+                <div class="col-12 text-center">
+                    <h1>Agregar productos</h1>
                 </div>
-                <div class="col-3 d-flex aling-items-center">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <div class=" ms-3">
-                        <p>¿Hasta 12 coutas sin interes </p>
-                        <a href="#">Ver más</a>
-                    </div>
-
-                </div>
-                <div class="col-3 d-flex aling-items-center">
-                    <i class="fa-brands fa-cc-paypal"></i>
-                    <div class=" ms-3">
-                        <p>tarjetas de debito</p>
-                        <a href="#">Ver más</a>
-                    </div>
-
-                </div>
-                <div class="col-3 d-flex aling-items-center">
-                    <div class=" ms-3">
-                        <p>Más medios de pago</p>
-                        <a href="#">Ver más</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="text-center mt-4">Productos</h1>
-            <div class="input-group input-group-lg">
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" placeholder="Buscar productos..." id="buscador">
-            </div>
-            <div class="container mt-5">
-                <div class="row gap-5" id="productList">
+                <div class="col-12">
+                    <form form action="" name="formulario" method="get">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">id</label>
+                            <input type="number" class="form-control" id="id" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Precio</label>
+                            <input type="text" class="form-control" id="price" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="desc" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <input list="browsers" class="form-control" id="desc" aria-describedby="emailHelp">
+                            <datalist id="browsers">
+                                <option value="Guitarra">
+                                <option value="Acordeon">
+                                <option value="Flauta">
+                                <option value="Play">
+                                <option value="Safari">
+                            </datalist>
+                        </div>
+                        <button type="button" id="btnSend" class="btn btn-primary">Agregar producto</button>
+                    </form>
 
                 </div>
             </div>
         </div>
-
     </main>
-    <footer></footer>
-    <script src="./assets/js/mostrarLista.js"></script>
+    <script src="./assets/js/index.js"></script>
     <script src="https://kit.fontawesome.com/558367293a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
