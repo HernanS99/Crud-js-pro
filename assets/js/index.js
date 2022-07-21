@@ -8,24 +8,28 @@ function saveProduct() {
         name = document.querySelector('#name').value,
         price = document.querySelector('#price').value,
         desc = document.querySelector('#desc').value;
+
     if (id === "" || name === "" || price === "" || desc === "") {
         alert("No olvides rellenar todos los campos");
     }
     else {
         
         let list = getProductList();
-        let resul = list.filter(function (list) {
+        /* let resul = list.filter(function (list) {
             return list.id === id
-        })
-        if (resul.length) {
-            alert("Producto ya ingresado");
-        } else {
+        })  */
+        let existe = list.find((elemento)=>elemento.id===id)
+        if(existe===undefined){
             addProducts(id, name, price, desc);
             document.querySelector('#nick').value = "";
             document.querySelector('#age').value = "";
             document.querySelector('#mail').value = "";
             alert("Producto ingresado");
+        }else{
+            alert("Producto ya existe");
         }
+        
+        
     }
 }
 
@@ -53,3 +57,8 @@ function localStorageProducts(plist) {
     localStorage.setItem('locallistProducts', JSON.stringify(plist));
 }
 
+function eliminarProducto(id){
+    let list = getProductList();
+    productos = list.filter((elemento)=>elemento.id!==id)
+    localStorageProducts(productos);
+}
